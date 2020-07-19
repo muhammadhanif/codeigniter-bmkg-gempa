@@ -6,21 +6,25 @@ class Gempa extends CI_Controller
 
     public function index()
     {
-        $this->load->view('gempa/terkini');
+        $data['api_version'] = 'api/v1';
+        $this->load->view('gempa/m5_terkini', $data);
     }
 
     public function m5()
     {
-        $this->load->view('gempa/m5');
+        $data['api_version'] = 'api/v1';
+        $this->load->view('gempa/m5', $data);
     }
 
     public function dirasakan()
     {
-        $this->load->view('gempa/dirasakan');
+        $data['api_version'] = 'api/v1';
+        $this->load->view('gempa/dirasakan', $data);
     }
 
     public function api()
     {
-        $this->load->view('gempa/api');
+        $data['api_version'] = 'api/v1';
+        $this->load->view('gempa/api', $data);
     }
 }

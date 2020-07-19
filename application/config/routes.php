@@ -49,6 +49,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | Examples:    my-controller/index    -> my_controller/index
 |        my-controller/my-method    -> my_controller/my_method
 */
-$route['default_controller'] = 'gempa';
-$route['404_override'] = '';
-$route['translate_uri_dashes'] = false;
+$route['default_controller']    = 'gempa';
+$route['404_override']          = '';
+$route['translate_uri_dashes']  = FALSE;
+
+// API V1
+$route['api/v1/gempa/m-5-terkini']['get']       = 'ApiV1/gempa_m_5_terkini';
+$route['api/v1/gempa/m-5']['get']               = 'ApiV1/gempa_m_5';
+$route['api/v1/gempa/dirasakan']['get']         = 'ApiV1/gempa_dirasakan';
+$route['api/v1/gempa/tsunami-terkini']['get']   = 'ApiV1/gempa_tsunami_terkini';
