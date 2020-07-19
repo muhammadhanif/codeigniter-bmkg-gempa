@@ -74,7 +74,7 @@
 
                         <li class="nav-header">Informasi</li>
                         <li class="nav-item">
-                            <a target="_blank" href="https://github.com/muhammadhanif/codeigniter-bmkg-gempa/tree/ci-3" class="nav-link">
+                            <a target="_blank" href="https://github.com/muhammadhanif/codeigniter-bmkg-gempa/tree/ci-4" class="nav-link">
                                 <i class="nav-icon fab fa-github-alt"></i>
                                 <p>
                                     Kode Sumber
