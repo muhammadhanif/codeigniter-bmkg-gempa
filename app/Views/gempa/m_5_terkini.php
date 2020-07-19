@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Gempabumi Terkini</title>
+    <title>Gempa M 5.0+ Terkini</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,15 +21,15 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="" class="nav-link">Gempabumi</a>
+                    <a href="" class="nav-link">Gempa</a>
                 </li>
             </ul>
         </nav>
 
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <a href="" class="brand-link">
-                <img src="<?php echo base_url('assets/image/globe-icon.png'); ?>" alt="Gempabumi" class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">Gempabumi</span>
+                <img src="<?php echo base_url('assets/image/globe-icon.png'); ?>" alt="Gempa" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light">GEMPA</span>
             </a>
 
             <div class="sidebar">
@@ -40,16 +40,16 @@
                             <a href="<?php echo base_url("gempa"); ?>" class="nav-link active">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
-                                    Gempabumi Terkini
+                                    Gempa M 5.0+ Terkini
                                 </p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="<?php echo base_url("gempa/m5"); ?>" class="nav-link">
+                            <a href="<?php echo base_url("gempa/m-5"); ?>" class="nav-link">
                                 <i class="nav-icon fas fa-wave-square"></i>
                                 <p>
-                                    Gempabumi M 5.0+
+                                    Gempa M 5.0+
                                 </p>
                             </a>
                         </li>
@@ -58,16 +58,16 @@
                             <a href="<?php echo base_url("gempa/dirasakan"); ?>" class="nav-link">
                                 <i class="nav-icon fas fa-water"></i>
                                 <p>
-                                    Gempabumi Dirasakan
+                                    Gempa Dirasakan
                                 </p>
                             </a>
                         </li>
 
                         <li class="nav-item active">
-                            <a href="<?php echo base_url("gempa/api"); ?>" class="nav-link">
+                            <a href="<?php echo base_url("gempa/api-endpoint"); ?>" class="nav-link">
                                 <i class="nav-icon fas fa-database"></i>
                                 <p>
-                                    API Data Gempabumi
+                                    API Endpoint
                                 </p>
                             </a>
                         </li>
@@ -99,7 +99,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Gempabumi Terkini</h1>
+                            <h1>Gempa M 5.0+ Terkini</h1>
                         </div>
 
                     </div>
@@ -114,9 +114,9 @@
                                 <div class="card-header">
                                     Peta Gempa
                                 </div>
-                                <div class="card-body p-0">
-                                    <div id="loading" class="text-center"><small>Loading data</small></div>
-                                    <img id="eqmap" class="img-fluid" src="" />
+                                <div class="card-body p-0 text-center">
+                                    <div id="loading_map"><small>Loading data</small></div>
+                                    <img id="eqmap" class="img-fluid px-1 px-sm-1 mt-1 mb-1" src="" />
                                 </div>
                             </div>
                         </div>
@@ -124,6 +124,10 @@
                             <div class="card card-outline card-danger">
                                 <div class="card-header">
                                     Data Gempa
+
+                                    <a href="<?php echo base_url('api/' . $api_version  . '/gempa/m-5-terkini'); ?>" target="_blank">
+                                        <button type="button" class="btn btn-success btn-sm float-right">API Endpoint</button>
+                                    </a>
                                 </div>
                                 <div class="card-body p-0">
                                     <div class="table-responsive">
@@ -183,24 +187,44 @@
         $(document).ready(function() {
             jQuery.ajax({
                 type: 'GET',
-                url: '<?php echo base_url('data/gempaterkini'); ?>',
+                url: '<?php echo base_url('api/' . $api_version  . '/gempa/m-5-terkini'); ?>',
                 dataType: 'json',
                 success: function(response) {
-                    console.log(response.data.gempa);
-                    $('#tanggal').text(response.data.gempa.Tanggal + ' ' + response.data.gempa.Jam);
-                    $('#magnitude').text(response.data.gempa.Magnitude);
-                    $('#kedalaman').text(response.data.gempa.Kedalaman);
-                    $('#koordinat').text(response.data.gempa.Lintang + ' ' + response.data.gempa.Bujur);
-                    $('#potensi').text(response.data.gempa.Potensi);
-                    $('#wilayah1').text(response.data.gempa.Wilayah1);
-                    $('#wilayah2').text(response.data.gempa.Wilayah2);
-                    $('#wilayah3').text(response.data.gempa.Wilayah3);
-                    $('#wilayah4').text(response.data.gempa.Wilayah4);
-                    $('#wilayah5').text(response.data.gempa.Wilayah5);
-                    $("#eqmap").attr('src', response.data.eqmap);
-                    $('#loading').hide();
+                    if (response.success) {
+                        console.log(response.message);
+
+                        $('#tanggal').text(response.data.gempa.Tanggal + ' ' + response.data.gempa.Jam);
+                        $('#magnitude').text(response.data.gempa.Magnitude);
+                        $('#kedalaman').text(response.data.gempa.Kedalaman);
+                        $('#koordinat').text(response.data.gempa.Lintang + ' ' + response.data.gempa.Bujur);
+                        $('#potensi').text(response.data.gempa.Potensi);
+                        $('#wilayah1').text(response.data.gempa.Wilayah1);
+                        $('#wilayah2').text(response.data.gempa.Wilayah2);
+                        $('#wilayah3').text(response.data.gempa.Wilayah3);
+                        $('#wilayah4').text(response.data.gempa.Wilayah4);
+                        $('#wilayah5').text(response.data.gempa.Wilayah5);
+                        $("#eqmap").attr('src', response.data.eqmap);
+                        $('#loading_map').hide();
+                    } else {
+                        console.log(response.message);
+
+                        $('#tanggal').text(response.message);
+                        $('#magnitude').text(response.message);
+                        $('#kedalaman').text(response.message);
+                        $('#koordinat').text(response.message);
+                        $('#potensi').text(response.message);
+                        $('#wilayah1').text(response.message);
+                        $('#wilayah2').text(response.message);
+                        $('#wilayah3').text(response.message);
+                        $('#wilayah4').text(response.message);
+                        $('#wilayah5').text(response.message);
+                        $("#eqmap").attr('src', '<?php echo base_url("assets/image/close-icon.png"); ?>');
+                        $('#loading_map').hide();
+                    }
                 },
-                error: function() {}
+                error: function() {
+                    console.log('Galat, bos!');
+                }
             });
         });
     </script>
