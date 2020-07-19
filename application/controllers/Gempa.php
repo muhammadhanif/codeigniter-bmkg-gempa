@@ -15,13 +15,13 @@ class Gempa extends CI_Controller
     public function m_5_terkini()
     {
         $data['api_version'] = $this->api_version;
-        $this->load->view('gempa/m5_terkini', $data);
+        $this->load->view('gempa/m_5_terkini', $data);
     }
 
     public function m_5()
     {
         $data['api_version'] = $this->api_version;
-        $this->load->view('gempa/m5', $data);
+        $this->load->view('gempa/m_5', $data);
     }
 
     public function dirasakan()
@@ -33,6 +33,6 @@ class Gempa extends CI_Controller
     public function api_endpoint()
     {
         $data['api_version'] = $this->api_version;
-        $this->load->view('gempa/api', $data);
+        $this->load->view('gempa/api_endpoint', $data);
     }
 }
