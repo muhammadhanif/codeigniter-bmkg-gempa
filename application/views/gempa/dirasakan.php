@@ -61,7 +61,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="<?php echo base_url("gempa/m5"); ?>" class="nav-link">
+                            <a href="<?php echo base_url("gempa/m-5"); ?>" class="nav-link">
                                 <i class="nav-icon fas fa-wave-square"></i>
                                 <p>
                                     Gempa M 5.0+
@@ -79,7 +79,7 @@
                         </li>
 
                         <li class="nav-item active">
-                            <a href="<?php echo base_url("gempa/api"); ?>" class="nav-link">
+                            <a href="<?php echo base_url("gempa/api-endpoint"); ?>" class="nav-link">
                                 <i class="nav-icon fas fa-database"></i>
                                 <p>
                                     API Endpoint
@@ -127,7 +127,7 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <a href="<?php echo base_url($api_version . '/gempa/dirasakan'); ?>" target="_blank">
+                                    <a href="<?php echo base_url('api/' . $api_version  . '/gempa/dirasakan'); ?>" target="_blank">
                                         <button type="button" class="btn btn-success btn-sm float-right">API Endpoint</button>
                                     </a>
                                 </div>
@@ -190,7 +190,7 @@
                     "url": "<?php echo base_url('assets/datatables/Indonesian.json'); ?>"
                 },
                 "ajax": {
-                    "url": "<?php echo base_url($api_version . '/gempa/dirasakan'); ?>",
+                    "url": "<?php echo base_url('api/' . $api_version  . '/gempa/dirasakan'); ?>",
                     "dataSrc": "data.Gempa",
                     "deferRender": true
                 },

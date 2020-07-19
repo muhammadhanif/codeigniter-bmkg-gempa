@@ -51,7 +51,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="<?php echo base_url("gempa/m5"); ?>" class="nav-link">
+                            <a href="<?php echo base_url("gempa/m-5"); ?>" class="nav-link">
                                 <i class="nav-icon fas fa-wave-square"></i>
                                 <p>
                                     Gempa M 5.0+
@@ -69,7 +69,7 @@
                         </li>
 
                         <li class="nav-item active">
-                            <a href="<?php echo base_url("gempa/api"); ?>" class="nav-link active">
+                            <a href="<?php echo base_url("gempa/api-endpoint"); ?>" class="nav-link active">
                                 <i class="nav-icon fas fa-database"></i>
                                 <p>
                                     API Endpoint
@@ -133,22 +133,22 @@
                                                 <tr>
                                                     <td>1</th>
                                                     <td>Gempa M 5.0+ Terkini</td>
-                                                    <td><a target="_blank" href="<?php echo base_url($api_version . '/gempa/m-5-terkini'); ?>"><?php echo base_url($api_version . '/gempa/m-5-terkini'); ?></a></td>
+                                                    <td><a target="_blank" href="<?php echo base_url('api/' . $api_version  . '/gempa/m-5-terkini'); ?>"><?php echo base_url('api/' . $api_version  . '/gempa/m-5-terkini'); ?></a></td>
                                                 </tr>
                                                 <tr>
                                                     <td>2</th>
                                                     <td>Gempa M 5.0+</td>
-                                                    <td><a target="_blank" href="<?php echo base_url($api_version . '/gempa/m-5'); ?>"><?php echo base_url($api_version . '/gempa/m-5'); ?></a></td>
+                                                    <td><a target="_blank" href="<?php echo base_url('api/' . $api_version  . '/gempa/m-5'); ?>"><?php echo base_url('api/' . $api_version  . '/gempa/m-5'); ?></a></td>
                                                 </tr>
                                                 <tr>
                                                     <td>3</th>
                                                     <td>Gempa Dirasakan</td>
-                                                    <td><a target="_blank" href="<?php echo base_url($api_version . '/gempa/dirasakan'); ?>"><?php echo base_url($api_version . '/gempa/dirasakan'); ?></a></td>
+                                                    <td><a target="_blank" href="<?php echo base_url('api/' . $api_version  . '/gempa/dirasakan'); ?>"><?php echo base_url('api/' . $api_version  . '/gempa/dirasakan'); ?></a></td>
                                                 </tr>
                                                 <tr>
                                                     <td>4</th>
                                                     <td>Gempa Berpotensi Tsunami Terkini</td>
-                                                    <td><a target="_blank" href="<?php echo base_url($api_version . '/gempa/tsunami-terkini'); ?>"><?php echo base_url($api_version . '/gempa/tsunami-terkini'); ?></a></td>
+                                                    <td><a target="_blank" href="<?php echo base_url('api/' . $api_version  . '/gempa/tsunami-terkini'); ?>"><?php echo base_url('api/' . $api_version  . '/gempa/tsunami-terkini'); ?></a></td>
                                                 </tr>
                                             </tbody>
                                         </table>

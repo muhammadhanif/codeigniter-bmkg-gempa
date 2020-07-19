@@ -53,6 +53,13 @@ $route['default_controller']    = 'gempa';
 $route['404_override']          = '';
 $route['translate_uri_dashes']  = FALSE;
 
+// Gempa
+$route['gempa']['get']             = 'Gempa/m_5_terkini';
+$route['gempa/m-5-terkini']['get']  = 'Gempa/m_5_terkini';
+$route['gempa/m-5']['get']          = 'Gempa/m_5';
+$route['gempa/dirasakan']['get']    = 'Gempa/dirasakan';
+$route['gempa/api-endpoint']['get'] = 'Gempa/api_endpoint';
+
 // API V1
 $route['api/v1/gempa/m-5-terkini']['get']       = 'ApiV1/gempa_m_5_terkini';
 $route['api/v1/gempa/m-5']['get']               = 'ApiV1/gempa_m_5';
