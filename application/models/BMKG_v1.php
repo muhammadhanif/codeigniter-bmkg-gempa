@@ -62,7 +62,7 @@ class BMKG_v1 extends CI_Model
             // error
             $json['success']  = FALSE;
             $json['message']  = 'Galat! Gagal mengambil data dari BMKG.';
-            $json['data']     = array();;
+            $json['data']     = array();
         } else {
             // success
             $json['success']  = TRUE;
