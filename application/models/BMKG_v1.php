@@ -6,7 +6,7 @@ class BMKG_v1 extends CI_Model
     public function get_gempa_m_5_terkini()
     {
         $url    = 'https://data.bmkg.go.id/autogempa.xml';
-        $type   = 'Gempabumi M 5.0+ Terkini';
+        $type   = 'Gempa M 5.0+ Terkini';
 
         return $this->data($url, $type);
     }
@@ -14,7 +14,7 @@ class BMKG_v1 extends CI_Model
     public function get_gempa_m_5()
     {
         $url    = 'https://data.bmkg.go.id/gempaterkini.xml';
-        $type   = '60 Gempabumi M 5.0+';
+        $type   = 'Gempa M 5.0+';
 
         return $this->data($url, $type);
     }
@@ -22,7 +22,7 @@ class BMKG_v1 extends CI_Model
     public function get_gempa_dirasakan()
     {
         $url    = 'https://data.bmkg.go.id/gempadirasakan.xml';
-        $type   = '20 Gempabumi Dirasakan';
+        $type   = 'Gempa Dirasakan';
 
         return $this->data($url, $type);
     }
@@ -30,7 +30,7 @@ class BMKG_v1 extends CI_Model
     public function get_gempa_tsunami_terkini()
     {
         $url    = 'https://data.bmkg.go.id/lasttsunami.xml';
-        $type   = 'Gempabumi Berpotensi Tsunami Terkini';
+        $type   = 'Gempa Berpotensi Tsunami Terkini';
 
         return $this->data($url, $type);
     }
@@ -79,7 +79,7 @@ class BMKG_v1 extends CI_Model
         $json['creator']['name']          = "Muhammad Hanif";
         $json['creator']['homepage']      = "https://hanifmu.com";
         $json['creator']['telegram']      = "https://t.me/muhammad_hanif";
-        $json['creator']['source_code']   = "https: //github.com/muhammadhanif/codeigniter-bmkg-gempa";
+        $json['creator']['source_code']   = "https://github.com/muhammadhanif/codeigniter-bmkg-gempa";
 
         return $this->output->set_header('HTTP/1.0 200 OK')
             ->set_header('HTTP/1.1 200 OK')
