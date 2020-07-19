@@ -4,23 +4,38 @@ namespace App\Controllers;
 
 class Gempa extends BaseController
 {
-	public function index()
+	private $api_version;
+
+	public function __construct()
 	{
-		return view('gempa/terkini');
+		$this->api_version = "v1";
 	}
 
-	public function m5()
+	public function m_5_terkini()
 	{
-		return view('gempa/m5');
+		$data['api_version'] = $this->api_version;
+
+		return view('gempa/m_5_terkini', $data);
+	}
+
+	public function m_5()
+	{
+		$data['api_version'] = $this->api_version;
+
+		return view('gempa/m_5', $data);
 	}
 
 	public function dirasakan()
 	{
-		return view('gempa/dirasakan');
+		$data['api_version'] = $this->api_version;
+
+		return view('gempa/dirasakan', $data);
 	}
 
-	public function api()
+	public function api_endpoint()
 	{
-		return view('gempa/api');
+		$data['api_version'] = $this->api_version;
+
+		return view('gempa/api_endpoint', $data);
 	}
 }
