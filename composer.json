@@ -1,0 +1,36 @@
+{
+  "name": "muhammadhanif/codeigniter-bmkg-gempa",
+  "type": "project",
+  "description": "Data gempabumi Indonesia: gempabumi terkini, gempabumi magnitude 5.0+, dan gempabumi dirasakan.",
+  "homepage": "https://github.com/muhammadhanif/codeigniter-bmkg-gempa",
+  "keywords": [
+    "ci3",
+    "codeigniter3",
+    "codeigniter",
+    "gempa",
+    "gempabumi",
+    "bmkg",
+    "bmkg-api",
+    "bmkg-json"
+  ],
+  "license": "MIT",
+  "support": {
+    "chat": "https://t.me/muhammad_hanif",
+    "source": "https://github.com/muhammadhanif/codeigniter-bmkg-gempa"
+  },
+  "require": {
+    "php": ">=5.3.7"
+  },
+  "suggest": {
+    "paragonie/random_compat": "Provides better randomness in PHP 5.x"
+  },
+  "require-dev": {
+    "mikey179/vfsStream": "1.1.*",
+    "phpunit/phpunit": "4.* || 5.*",
+    "squizlabs/php_codesniffer": "^3.1"
+  },
+  "scripts": {
+    "cs-check": "phpcs",
+    "cs-fix": "phpcbf"
+  }
+}
