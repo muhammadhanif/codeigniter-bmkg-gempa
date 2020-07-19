@@ -26,15 +26,15 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="" class="nav-link">Gempabumi</a>
+                    <a href="" class="nav-link">Gempa</a>
                 </li>
             </ul>
         </nav>
 
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <a href="" class="brand-link">
-                <img src="<?php echo base_url('assets/image/globe-icon.png'); ?>" alt="Gempabumi" class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">Gempabumi</span>
+                <img src="<?php echo base_url('assets/image/globe-icon.png'); ?>" alt="Gempa" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light">GEMPA</span>
             </a>
 
             <div class="sidebar">
@@ -45,7 +45,7 @@
                             <a href="<?php echo base_url("gempa"); ?>" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
-                                    Gempabumi M 5.0+ Terkini
+                                    Gempa M 5.0+ Terkini
                                 </p>
                             </a>
                         </li>
@@ -54,7 +54,7 @@
                             <a href="<?php echo base_url("gempa/m5"); ?>" class="nav-link">
                                 <i class="nav-icon fas fa-wave-square"></i>
                                 <p>
-                                    Gempabumi M 5.0+
+                                    Gempa M 5.0+
                                 </p>
                             </a>
                         </li>
@@ -63,7 +63,7 @@
                             <a href="<?php echo base_url("gempa/dirasakan"); ?>" class="nav-link">
                                 <i class="nav-icon fas fa-water"></i>
                                 <p>
-                                    Gempabumi Dirasakan
+                                    Gempa Dirasakan
                                 </p>
                             </a>
                         </li>
@@ -117,7 +117,7 @@
                         <div class="col-xl-12 col-lg-12">
                             <div class="card">
                                 <div class="card-header">
-                                    Data Gempabumi
+                                    V1
                                 </div>
                                 <div class="card-body p-0">
                                     <div class="table-responsive">
@@ -132,22 +132,22 @@
                                             <tbody>
                                                 <tr>
                                                     <td>1</th>
-                                                    <td>Gempabumi M 5.0+ Terkini</td>
+                                                    <td>Gempa M 5.0+ Terkini</td>
                                                     <td><a target="_blank" href="<?php echo base_url($api_version . '/gempa/m-5-terkini'); ?>"><?php echo base_url($api_version . '/gempa/m-5-terkini'); ?></a></td>
                                                 </tr>
                                                 <tr>
                                                     <td>2</th>
-                                                    <td>Gempabumi M 5.0+</td>
+                                                    <td>Gempa M 5.0+</td>
                                                     <td><a target="_blank" href="<?php echo base_url($api_version . '/gempa/m-5'); ?>"><?php echo base_url($api_version . '/gempa/m-5'); ?></a></td>
                                                 </tr>
                                                 <tr>
                                                     <td>3</th>
-                                                    <td>Gempabumi Dirasakan</td>
+                                                    <td>Gempa Dirasakan</td>
                                                     <td><a target="_blank" href="<?php echo base_url($api_version . '/gempa/dirasakan'); ?>"><?php echo base_url($api_version . '/gempa/dirasakan'); ?></a></td>
                                                 </tr>
                                                 <tr>
                                                     <td>4</th>
-                                                    <td>Gempabumi Berpotensi Tsunami Terkini</td>
+                                                    <td>Gempa Berpotensi Tsunami Terkini</td>
                                                     <td><a target="_blank" href="<?php echo base_url($api_version . '/gempa/tsunami-terkini'); ?>"><?php echo base_url($api_version . '/gempa/tsunami-terkini'); ?></a></td>
                                                 </tr>
                                             </tbody>

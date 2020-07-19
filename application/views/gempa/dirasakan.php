@@ -7,7 +7,7 @@
 <html>
 
 <head>
-    <title>Gempabumi Dirasakan</title>
+    <title>Gempa Dirasakan</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,15 +36,15 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="" class="nav-link">Gempabumi</a>
+                    <a href="" class="nav-link">Gempa</a>
                 </li>
             </ul>
         </nav>
 
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <a href="" class="brand-link">
-                <img src="<?php echo base_url('assets/image/globe-icon.png'); ?>" alt="Gempabumi" class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">Gempabumi</span>
+                <img src="<?php echo base_url('assets/image/globe-icon.png'); ?>" alt="Gempa" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light">GEMPA</span>
             </a>
 
             <div class="sidebar">
@@ -55,7 +55,7 @@
                             <a href="<?php echo base_url("gempa"); ?>" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
-                                    Gempabumi M 5.0+ Terkini
+                                    Gempa M 5.0+ Terkini
                                 </p>
                             </a>
                         </li>
@@ -64,7 +64,7 @@
                             <a href="<?php echo base_url("gempa/m5"); ?>" class="nav-link">
                                 <i class="nav-icon fas fa-wave-square"></i>
                                 <p>
-                                    Gempabumi M 5.0+
+                                    Gempa M 5.0+
                                 </p>
                             </a>
                         </li>
@@ -73,7 +73,7 @@
                             <a href="<?php echo base_url("gempa/dirasakan"); ?>" class="nav-link active">
                                 <i class="nav-icon fas fa-water"></i>
                                 <p>
-                                    Gempabumi Dirasakan
+                                    Gempa Dirasakan
                                 </p>
                             </a>
                         </li>
@@ -114,7 +114,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Gempabumi Dirasakan</h1>
+                            <h1>Gempa Dirasakan</h1>
                         </div>
 
                     </div>
