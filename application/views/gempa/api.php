@@ -7,7 +7,7 @@
 <html>
 
 <head>
-    <title>API Data Gempabumi</title>
+    <title>API Endpoint</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -45,7 +45,7 @@
                             <a href="<?php echo base_url("gempa"); ?>" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
-                                    Gempabumi Terkini
+                                    Gempabumi M 5.0+ Terkini
                                 </p>
                             </a>
                         </li>
@@ -72,7 +72,7 @@
                             <a href="<?php echo base_url("gempa/api"); ?>" class="nav-link active">
                                 <i class="nav-icon fas fa-database"></i>
                                 <p>
-                                    API Data Gempabumi
+                                    API Endpoint
                                 </p>
                             </a>
                         </li>
@@ -104,7 +104,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>API Data Gempabumi</h1>
+                            <h1>API Endpoint</h1>
                         </div>
 
                     </div>
@@ -117,7 +117,7 @@
                         <div class="col-xl-12 col-lg-12">
                             <div class="card">
                                 <div class="card-header">
-                                    Data Gempa
+                                    Data Gempabumi
                                 </div>
                                 <div class="card-body p-0">
                                     <div class="table-responsive">
@@ -133,22 +133,22 @@
                                                 <tr>
                                                     <td>1</th>
                                                     <td>Gempabumi M 5.0+ Terkini</td>
-                                                    <td><a target="_blank" href="<?php echo base_url('data/gempaterkini'); ?>"><?php echo base_url('data/gempaterkini'); ?></a></td>
+                                                    <td><a target="_blank" href="<?php echo base_url($api_version . '/gempa/m-5-terkini'); ?>"><?php echo base_url($api_version . '/gempa/m-5-terkini'); ?></a></td>
                                                 </tr>
                                                 <tr>
                                                     <td>2</th>
-                                                    <td>60 Gempabumi M 5.0+</td>
-                                                    <td><a target="_blank" href="<?php echo base_url('data/gempam5'); ?>"><?php echo base_url('data/gempam5'); ?></a></td>
+                                                    <td>Gempabumi M 5.0+</td>
+                                                    <td><a target="_blank" href="<?php echo base_url($api_version . '/gempa/m-5'); ?>"><?php echo base_url($api_version . '/gempa/m-5'); ?></a></td>
                                                 </tr>
                                                 <tr>
                                                     <td>3</th>
-                                                    <td>20 Gempabumi Dirasakan</td>
-                                                    <td><a target="_blank" href="<?php echo base_url('data/gempadirasakan'); ?>"><?php echo base_url('data/gempadirasakan'); ?></a></td>
+                                                    <td>Gempabumi Dirasakan</td>
+                                                    <td><a target="_blank" href="<?php echo base_url($api_version . '/gempa/dirasakan'); ?>"><?php echo base_url($api_version . '/gempa/dirasakan'); ?></a></td>
                                                 </tr>
                                                 <tr>
                                                     <td>4</th>
                                                     <td>Gempabumi Berpotensi Tsunami Terkini</td>
-                                                    <td><a target="_blank" href="<?php echo base_url('data/lasttsunami'); ?>"><?php echo base_url('data/lasttsunami'); ?></a></td>
+                                                    <td><a target="_blank" href="<?php echo base_url($api_version . '/gempa/tsunami-terkini'); ?>"><?php echo base_url($api_version . '/gempa/tsunami-terkini'); ?></a></td>
                                                 </tr>
                                             </tbody>
                                         </table>

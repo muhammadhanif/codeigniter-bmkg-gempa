@@ -55,7 +55,7 @@
                             <a href="<?php echo base_url("gempa"); ?>" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
-                                    Gempabumi Terkini
+                                    Gempabumi M 5.0+ Terkini
                                 </p>
                             </a>
                         </li>
@@ -82,7 +82,7 @@
                             <a href="<?php echo base_url("gempa/api"); ?>" class="nav-link">
                                 <i class="nav-icon fas fa-database"></i>
                                 <p>
-                                    API Data Gempabumi
+                                    API Endpoint
                                 </p>
                             </a>
                         </li>
@@ -126,6 +126,11 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
+                                <div class="card-header">
+                                    <a href="<?php echo base_url($api_version . '/gempa/dirasakan'); ?>" target="_blank">
+                                        <button type="button" class="btn btn-success btn-sm float-right">API Endpoint</button>
+                                    </a>
+                                </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
                                         <table id="gempaTerkini" class="table table-bordered table-striped">
@@ -185,7 +190,7 @@
                     "url": "<?php echo base_url('assets/datatables/Indonesian.json'); ?>"
                 },
                 "ajax": {
-                    "url": "<?php echo base_url('data/gempadirasakan'); ?>",
+                    "url": "<?php echo base_url($api_version . '/gempa/dirasakan'); ?>",
                     "dataSrc": "data.Gempa",
                     "deferRender": true
                 },
