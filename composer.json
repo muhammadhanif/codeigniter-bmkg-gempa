@@ -26,8 +26,9 @@
   },
   "require-dev": {
     "mikey179/vfsStream": "1.1.*",
-    "phpunit/phpunit": "4.* || 5.*",
-    "squizlabs/php_codesniffer": "^3.1"
+    "phpunit/phpunit": "6.5.9",
+    "squizlabs/php_codesniffer": "^3.1",
+    "kenjis/ci-phpunit-test": "0.14.0"
   },
   "scripts": {
     "cs-check": "phpcs",

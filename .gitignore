@@ -27,8 +27,6 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 *.stTheme.cache
 *.sublime-workspace
 *.sublime-project
-/tests/tests/
-/tests/results/
 
 #-------------------------
 # Temporary Files
@@ -44,3 +42,9 @@ writable/*
 
 ##
 app/*
+
+#-------------------------
+# For Testing Using PHPUnit
+#-------------------------
+application/tests/*
+tests/*
