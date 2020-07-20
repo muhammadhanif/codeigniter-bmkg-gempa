@@ -11,23 +11,23 @@ class ApiV1 extends CI_Controller
         $this->load->model('BMKG_v1');
     }
 
-    public function gempa_m_5_terkini()
+    public function gempaM5Terkini()
     {
-        return $this->BMKG_v1->get_gempa_m_5_terkini();
+        return $this->BMKG_v1->getGempaM5Terkini();
     }
 
-    public function gempa_m_5()
+    public function gempaM5()
     {
-        return $this->BMKG_v1->get_gempa_m_5();
+        return $this->BMKG_v1->getGempaM5();
     }
 
-    public function gempa_dirasakan()
+    public function gempaDirasakan()
     {
-        return $this->BMKG_v1->get_gempa_dirasakan();
+        return $this->BMKG_v1->getGempaDirasakan();
     }
 
-    public function gempa_tsunami_terkini()
+    public function gempaTsunamiTerkini()
     {
-        return $this->BMKG_v1->get_gempa_tsunami_terkini();
+        return $this->BMKG_v1->getGempaTsunamiTerkini();
     }
 }
