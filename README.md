@@ -13,7 +13,7 @@ Data gempabumi Indonesia: gempabumi terkini, gempabumi magnitude 5.0+, dan gempa
 #### Branch
 
 - [ci-3](https://github.com/muhammadhanif/codeigniter-bmkg-gempa/tree/ci-3)
-- ci-4 `coming soon`
+- [ci-4](https://github.com/muhammadhanif/codeigniter-bmkg-gempa/tree/ci-4)
 
 #### Sumber Data
 
