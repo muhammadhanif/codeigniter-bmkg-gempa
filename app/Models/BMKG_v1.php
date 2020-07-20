@@ -4,39 +4,39 @@ namespace App\Models;
 
 class BMKG_v1
 {
-    public function get_gempa_m_5_terkini()
+    public function getGempaM5Terkini()
     {
         $url    = 'https://data.bmkg.go.id/autogempa.xml';
         $type   = 'Gempa M 5.0+ Terkini';
 
-        return $this->data($url, $type);
+        return $this->_data($url, $type);
     }
 
-    public function get_gempa_m_5()
+    public function getGempaM5()
     {
         $url    = 'https://data.bmkg.go.id/gempaterkini.xml';
         $type   = 'Gempa M 5.0+';
 
-        return $this->data($url, $type);
+        return $this->_data($url, $type);
     }
 
-    public function get_gempa_dirasakan()
+    public function getGempaDirasakan()
     {
         $url    = 'https://data.bmkg.go.id/gempadirasakan.xml';
         $type   = 'Gempa Dirasakan';
 
-        return $this->data($url, $type);
+        return $this->_data($url, $type);
     }
 
-    public function get_gempa_tsunami_terkini()
+    public function getGempaTsunamiTerkini()
     {
         $url    = 'https://data.bmkg.go.id/lasttsunami.xml';
         $type   = 'Gempa Berpotensi Tsunami Terkini';
 
-        return $this->data($url, $type);
+        return $this->_data($url, $type);
     }
 
-    private function curl($url)
+    private function _curl($url)
     {
 
         $ch = curl_init();
@@ -49,9 +49,9 @@ class BMKG_v1
         curl_close($ch);
     }
 
-    private function data($url, $type)
+    private function _data($url, $type)
     {
-        $curl  = $this->curl($url);
+        $curl  = $this->_curl($url);
 
         // json
         $json['type']             = $type;

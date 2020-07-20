@@ -6,37 +6,37 @@ use CodeIgniter\RESTful\ResourceController;
 
 class ApiV1 extends ResourceController
 {
-	private $BMKG;
+	private $_BMKG;
 
 	public function __construct()
 	{
-		$this->BMKG = model('App\Models\BMKG_v1', false);
+		$this->_BMKG = model('App\Models\BMKG_v1', false);
 	}
 
-	public function gempa_m_5_terkini()
+	public function gempaM5Terkini()
 	{
-		$data = $this->BMKG->get_gempa_m_5_terkini();
+		$data = $this->_BMKG->getGempaM5Terkini();
 
 		return $this->respond($data);
 	}
 
-	public function gempa_m_5()
+	public function gempaM5()
 	{
-		$data = $this->BMKG->get_gempa_m_5();
+		$data = $this->_BMKG->getGempaM5();
 
 		return $this->respond($data);
 	}
 
-	public function gempa_dirasakan()
+	public function gempaDirasakan()
 	{
-		$data = $this->BMKG->get_gempa_dirasakan();
+		$data = $this->_BMKG->getGempaDirasakan();
 
 		return $this->respond($data);
 	}
 
-	public function gempa_tsunami_terkini()
+	public function gempaTsunamiTerkini()
 	{
-		$data = $this->BMKG->get_gempa_tsunami_terkini();
+		$data = $this->_BMKG->getGempaTsunamiTerkini();
 
 		return $this->respond($data);
 	}
