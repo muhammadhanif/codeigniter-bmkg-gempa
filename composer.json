@@ -42,7 +42,9 @@
       "@composer dump-autoload",
       "CodeIgniter\\ComposerScripts::postUpdate"
     ],
-    "test": "phpunit"
+    "test": "phpunit",
+    "cs-check": "phpcs",
+    "cs-fix": "phpcbf"
   },
   "support": {
     "chat": "https://t.me/muhammad_hanif",
