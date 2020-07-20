@@ -26,12 +26,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 if (php_sapi_name() == "cli") {
     // for testing purpose using PHPunit
-    $_SERVER['HTTP_HOST'] = 'dev.local';
+    $_SERVER['HTTP_HOST'] = '';
 }
 
 $config['base_url'] = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "https" : "http");
 $config['base_url'] .= "://" . $_SERVER['HTTP_HOST'];
 $config['base_url'] .= str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAME']);
+
+
+
 
 /*
 |--------------------------------------------------------------------------
