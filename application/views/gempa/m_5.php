@@ -1,8 +1,3 @@
-<?php if (!defined('BASEPATH')) {
-    exit('No direct script access allowed');
-}
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -18,6 +13,7 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/datatables-responsive/css/responsive.bootstrap4.min.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/adminLTE/css/adminlte.min.css'); ?>">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
+    <link rel="stylesheet" href="<?php echo base_url('assets/leaflet/leaflet.css'); ?>" />
 
     <style>
         table.dataTable thead th,
@@ -89,7 +85,7 @@
 
                         <li class="nav-header">Informasi</li>
                         <li class="nav-item">
-                            <a target="_blank" href="https://github.com/muhammadhanif/codeigniter-bmkg-gempa/tree/ci-3" class="nav-link">
+                            <a target="_blank" href="https://github.com/muhammadhanif/codeigniter-bmkg-gempa/tree/ci-4" class="nav-link">
                                 <i class="nav-icon fab fa-github-alt"></i>
                                 <p>
                                     Kode Sumber
@@ -128,7 +124,18 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
+                                <div class="card-header">Peta Titik Gempa M 5.0+</div>
+                                <div class="card-body p-0">
+                                    <div id="mapid" style="width: 100%; height: 400px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
                                 <div class="card-header">
+                                    Data Gempa M 5.0+
                                     <a href="<?php echo base_url('api/' . $api_version  . '/gempa/m-5'); ?>" target="_blank">
                                         <button type="button" class="btn btn-success btn-sm float-right">API Endpoint</button>
                                     </a>
@@ -180,6 +187,60 @@
     <script src="<?php echo base_url('assets/datatables-responsive/js/dataTables.responsive.min.js'); ?>"></script>
     <script src="<?php echo base_url('assets/datatables-responsive/js/responsive.bootstrap4.min.js'); ?>"></script>
     <script src="<?php echo base_url('assets/adminLTE/js/adminlte.min.js'); ?>"></script>
+    <script src="<?php echo base_url('assets/leaflet/leaflet.js'); ?>"></script>
+
+    <script>
+        $(document).ready(function() {
+            jQuery.ajax({
+                type: 'GET',
+                url: '<?php echo base_url('api/' . $api_version  . '/gempa/m-5'); ?>',
+                dataType: 'json',
+                success: function(response) {
+                    earthquakeMap(response.data.gempa, response.success);
+                },
+                error: function(response) {
+                    console.log('Galat, bos!');
+                    earthquakeMap(response, false);
+                }
+            });
+        });
+    </script>
+
+    <script>
+        function earthquakeMap(earthquake, success) {
+            var mymap = L.map("mapid").setView([-1.263325, 118.606436], 4);
+
+            L.tileLayer(
+                "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw", {
+                    maxZoom: 18,
+                    minZoom: 2,
+                    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+                        '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                        'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                    id: "mapbox/dark-v10",
+                    tileSize: 512,
+                    zoomOffset: -1,
+                    accessToken: ''
+                }
+            ).addTo(mymap);
+
+            if (success == true) {
+                earthquake.forEach(function(item) {
+                    var dateTime = item.Tanggal + " " + item.Jam;
+                    var magnitude = item.Magnitude
+                    var coordinates = item.point.coordinates.split(',');
+                    var latitude = parseFloat(coordinates[1].trim());
+                    var longitude = parseFloat(coordinates[0].trim());
+
+                    L.circle([latitude, longitude], {
+                            color: "red"
+                        })
+                        .addTo(mymap).bindTooltip(dateTime + " / " + magnitude);
+                });
+            }
+
+        }
+    </script>
 
     <script>
         $(function() {
