@@ -53,38 +53,34 @@ class BMKG_v1 extends CI_Model
         $curl  = $this->_curl($url);
 
         // json
-        $json['type']             = $type;
-        $json['data_source']      = 'BMKG (Badan Meteorologi, Klimatologi, dan Geofisika)';
-        $json['data_source_url']  = $url;
+        $result['type']             = $type;
+        $result['data_source']      = 'BMKG (Badan Meteorologi, Klimatologi, dan Geofisika)';
+        $result['data_source_url']  = $url;
+        $result['data']     = array();
 
         // validation
         if (strpos($curl, "html") or $curl === false) {
             // error
-            $json['success']  = false;
-            $json['message']  = 'Galat! Gagal mengambil data dari BMKG.';
-            $json['data']     = array();
+            $result['success']  = false;
+            $result['message']  = 'Galat! Gagal mengambil data dari BMKG.';
         } else {
             // success
-            $json['success']  = true;
-            $json['message']  = 'OK!';
-            $json['data']     = simplexml_load_string($curl);
+            $result['success']  = true;
+            $result['message']  = 'OK!';
+            $result['data']     = simplexml_load_string($curl);
 
             if (strpos($url, "autogempa.xml")) {
-                $json['data']->eqmap  = 'https://data.bmkg.go.id/eqmap.gif';
+                $result['data']->eqmap  = 'https://data.bmkg.go.id/eqmap.gif';
             }
         }
 
         // creator
-        $json['creator'] = array();
-        $json['creator']['name']          = "Muhammad Hanif";
-        $json['creator']['homepage']      = "https://hanifmu.com";
-        $json['creator']['telegram']      = "https://t.me/muhammad_hanif";
-        $json['creator']['source_code']   = "https://github.com/muhammadhanif/codeigniter-bmkg-gempa";
+        $result['creator'] = array();
+        $result['creator']['name']          = "Muhammad Hanif";
+        $result['creator']['homepage']      = "https://hanifmu.com";
+        $result['creator']['telegram']      = "https://t.me/muhammad_hanif";
+        $result['creator']['source_code']   = "https://github.com/muhammadhanif/codeigniter-bmkg-gempa";
 
-        return $this->output->set_header('HTTP/1.0 200 OK')
-            ->set_header('HTTP/1.1 200 OK')
-            ->set_status_header(200)
-            ->set_content_type('application/json')
-            ->set_output(json_encode($json));
+        return $result;
     }
 }
