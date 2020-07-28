@@ -13,3 +13,10 @@ Data gempabumi Indonesia: gempabumi terkini, gempabumi magnitude 5.0+, &amp; gem
 #### Sumber Data
 
 Semua data gempabumi yang ada di aplikasi ini bersumber dari [BMKG (Badan Meteorologi, Klimatologi, dan Geofisika)](https://data.bmkg.go.id/gempabumi/)
+
+#### Donasi
+
+Jika kalian ingin berdonasi, silahkan menghubungi kami melalui jalur berikut ini:
+
+- Email: moehammadhanif@gmail.com
+- Telegram: [t.me/muhammad_hanif](https://t.me/muhammad_hanif)
