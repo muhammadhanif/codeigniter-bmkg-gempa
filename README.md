@@ -1,11 +1,12 @@
-# Codeigniter x BMKG x Gempa
+# CodeIgniter x BMKG x Gempa
 
-Data gempabumi Indonesia: gempabumi terkini, gempabumi magnitude 5.0+, dan gempabumi dirasakan.
+Aplikasi CodeIgniter x BMKG x Gempa adalah aplikasi berbasis web yang menampilkan data gempa bumi yang terjadi di wilayah Indonesia.
 
 #### Stack Aplikasi
 
-- [Codeigniter 3 / 4](https://codeigniter.com/)
+- [CodeIgniter 3 / 4](https://codeigniter.com/)
 - [AdminLTE](https://adminlte.io/)
+- [Leaflet](https://leafletjs.com/)
 - [JQuery](https://jquery.com/)
 - [Datatables](https://datatables.net/)
 - [Font Awesome](https://fontawesome.com/)
