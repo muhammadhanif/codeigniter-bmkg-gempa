@@ -79,7 +79,7 @@
 
                         <li class="nav-header">Informasi</li>
                         <li class="nav-item">
-                            <a target="_blank" href="https://github.com/muhammadhanif/codeigniter-bmkg-gempa/tree/ci-3" class="nav-link">
+                            <a target="_blank" href="https://github.com/muhammadhanif/codeigniter-bmkg-gempa" class="nav-link">
                                 <i class="nav-icon fab fa-github-alt"></i>
                                 <p>
                                     Kode Sumber
@@ -174,6 +174,11 @@
                                         </table>
                                     </div>
                                 </div>
+
+                                <div class="card-footer text-center">
+                                    Sumber Data: <a target="_blank" href="https://bmkg.go.id/">BMKG (Badan
+                                        Meteorologi, Klimatologi, dan Geofisika)</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -182,7 +187,9 @@
         </div>
 
         <footer class="main-footer text-center">
-            <small>Sumber data: BMKG (Badan Meteorologi, Klimatologi, dan Geofisika)</small>
+            <strong>
+                DEVELOPED BY <a target="_blank" href="https://hanifmu.com">MUHAMMAD HANIF</a>
+            </strong>
         </footer>
     </div>
     <script src="<?= base_url('assets/jquery/jquery.min.js'); ?>"></script>
