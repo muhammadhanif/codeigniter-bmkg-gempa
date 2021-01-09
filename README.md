@@ -13,11 +13,11 @@ Aplikasi CodeIgniter x BMKG x Gempa adalah aplikasi berbasis web yang menampilka
 
 #### Sumber Data
 
-Semua data gempabumi yang ada di aplikasi ini bersumber dari [BMKG (Badan Meteorologi, Klimatologi, dan Geofisika)](https://data.bmkg.go.id/gempabumi/)
+Semua data gempa bumi yang ada di aplikasi ini bersumber dari [BMKG (Badan Meteorologi, Klimatologi, dan Geofisika)](https://data.bmkg.go.id/gempabumi/)
 
 #### Donasi
 
 Jika kalian ingin berdonasi, silahkan menghubungi kami melalui jalur berikut ini:
 
 - Email: moehammadhanif@gmail.com
-- Telegram: [t.me/muhammad_hanif](https://t.me/muhammad_hanif)
+- Telegram: [@hanifmu](https://t.me/hanifmu)
