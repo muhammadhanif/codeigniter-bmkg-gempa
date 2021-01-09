@@ -2,7 +2,7 @@
 
 Aplikasi CodeIgniter x BMKG x Gempa adalah aplikasi berbasis web yang menampilkan data gempa bumi yang terjadi di wilayah Indonesia.
 
-#### Stack Aplikasi
+## Stack Aplikasi
 
 - [CodeIgniter 3 / 4](https://codeigniter.com/)
 - [AdminLTE](https://adminlte.io/)
@@ -11,14 +11,9 @@ Aplikasi CodeIgniter x BMKG x Gempa adalah aplikasi berbasis web yang menampilka
 - [Datatables](https://datatables.net/)
 - [Font Awesome](https://fontawesome.com/)
 
-#### Branch
-
-- [ci-3](https://github.com/muhammadhanif/codeigniter-bmkg-gempa/tree/ci-3)
-- [ci-4](https://github.com/muhammadhanif/codeigniter-bmkg-gempa/tree/ci-4)
-
 ## Sumber Data
 
-Semua data gempabumi yang ada di aplikasi ini bersumber dari [BMKG (Badan Meteorologi, Klimatologi, dan Geofisika)](https://data.bmkg.go.id/gempabumi/)
+Semua data gempa bumi yang ada di aplikasi ini bersumber dari [BMKG (Badan Meteorologi, Klimatologi, dan Geofisika)](https://data.bmkg.go.id/gempabumi/)
 
 ## Donasi
 
