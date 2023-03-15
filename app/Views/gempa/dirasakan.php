@@ -145,7 +145,7 @@
                                                 <tr>
                                                     <th></th>
                                                     <th>Tanggal dan Waktu</th>
-                                                    <th>Magnitude</th>
+                                                    <th>Magnitudo</th>
                                                     <th>Kedalaman</th>
                                                     <th>Koordinat</th>
                                                     <th>Keterangan</th>
@@ -158,7 +158,7 @@
                                                 <tr>
                                                     <th></th>
                                                     <th>Tanggal dan Waktu</th>
-                                                    <th>Magnitude</th>
+                                                    <th>Magnitudo</th>
                                                     <th>Kedalaman</th>
                                                     <th>Koordinat</th>
                                                     <th>Keterangan</th>
@@ -202,7 +202,7 @@
                 url: '<?php echo base_url('api/' . $api_version  . '/gempa/dirasakan'); ?>',
                 dataType: 'json',
                 success: function(response) {
-                    earthquakeMap(response.data.Gempa, response.success);
+                    earthquakeMap(response.data.gempa, response.success);
                 },
                 error: function(response) {
                     console.log('Galat, bos!');
@@ -258,7 +258,7 @@
                 },
                 "ajax": {
                     "url": "<?php echo base_url('api/' . $api_version  . '/gempa/dirasakan'); ?>",
-                    "dataSrc": "data.Gempa",
+                    "dataSrc": "data.gempa",
                     "deferRender": true
                 },
                 "paging": true,
@@ -270,9 +270,14 @@
                 "columns": [{
                         "data": null,
                         "sClass": "text-center"
-                    }, {
+                    }, 
+                    {
                         "data": "Tanggal",
-                        "sClass": "text-center"
+                        "sClass": "text-center",
+                        "render": function(data, type, row) {
+                            return data +
+                                ' ' + row.Jam;
+                        }
                     },
                     {
                         "data": "Magnitude",
@@ -283,11 +288,15 @@
                         "sClass": "text-center"
                     },
                     {
-                        "data": "Posisi",
-                        "sClass": "text-center"
+                        "data": "",
+                        "sClass": "text-center",
+                        "render": function(data, type, row) {
+                            return row.Lintang +
+                                ' ' + row.Bujur;
+                        }
                     },
                     {
-                        "data": "Keterangan",
+                        "data": "Wilayah",
                         "sClass": "text-center"
                     },
                     {

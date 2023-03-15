@@ -6,7 +6,7 @@ class BMKG_v1
 {
     public function getGempaM5Terkini()
     {
-        $url    = 'https://data.bmkg.go.id/autogempa.xml';
+        $url    = 'https://data.bmkg.go.id/DataMKG/TEWS/autogempa.xml';
         $type   = 'Gempa M 5.0+ Terkini';
 
         return $this->_data($url, $type);
@@ -14,7 +14,7 @@ class BMKG_v1
 
     public function getGempaM5()
     {
-        $url    = 'https://data.bmkg.go.id/gempaterkini.xml';
+        $url    = 'https://data.bmkg.go.id/DataMKG/TEWS/gempaterkini.xml';
         $type   = 'Gempa M 5.0+';
 
         return $this->_data($url, $type);
@@ -22,12 +22,13 @@ class BMKG_v1
 
     public function getGempaDirasakan()
     {
-        $url    = 'https://data.bmkg.go.id/gempadirasakan.xml';
+        $url    = 'https://data.bmkg.go.id/DataMKG/TEWS/gempadirasakan.xml';
         $type   = 'Gempa Dirasakan';
 
         return $this->_data($url, $type);
     }
 
+    /*
     public function getGempaTsunamiTerkini()
     {
         $url    = 'https://data.bmkg.go.id/lasttsunami.xml';
@@ -35,6 +36,7 @@ class BMKG_v1
 
         return $this->_data($url, $type);
     }
+    */
 
     private function _curl($url)
     {
@@ -71,17 +73,13 @@ class BMKG_v1
 
             $json['data']       = array();
             $json['data']       = simplexml_load_string($curl);
-
-            if (strpos($url, "autogempa.xml")) {
-                $json['data']->eqmap  = 'https://data.bmkg.go.id/eqmap.gif';
-            }
         }
 
         // creator
         $json['creator'] = array();
         $json['creator']['name']          = "Muhammad Hanif";
         $json['creator']['homepage']      = "https://hanifmu.com";
-        $json['creator']['telegram']      = "https://t.me/muhammad_hanif";
+        $json['creator']['telegram']      = "https://t.me/hanifmu";
         $json['creator']['source_code']   = "https://github.com/muhammadhanif/codeigniter-bmkg-gempa";
 
         return $json;

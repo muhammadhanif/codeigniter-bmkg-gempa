@@ -140,11 +140,6 @@
                                                     <td>Gempa Dirasakan</td>
                                                     <td><a target="_blank" href="<?php echo base_url('api/' . $api_version  . '/gempa/dirasakan'); ?>"><?php echo base_url('api/' . $api_version  . '/gempa/dirasakan'); ?></a></td>
                                                 </tr>
-                                                <tr>
-                                                    <td>4</th>
-                                                    <td>Gempa Berpotensi Tsunami Terkini</td>
-                                                    <td><a target="_blank" href="<?php echo base_url('api/' . $api_version  . '/gempa/tsunami-terkini'); ?>"><?php echo base_url('api/' . $api_version  . '/gempa/tsunami-terkini'); ?></a></td>
-                                                </tr>
                                             </tbody>
                                         </table>
                                     </div>

@@ -44,7 +44,9 @@ $routes->get('gempa/api-endpoint', 'Gempa::apiEndpoint');
 $routes->get('api/v1/gempa/m-5-terkini', 'ApiV1::gempaM5Terkini');
 $routes->get('api/v1/gempa/m-5', 'ApiV1::gempaM5');
 $routes->get('api/v1/gempa/dirasakan', 'ApiV1::gempaDirasakan');
+/*
 $routes->get('api/v1/gempa/tsunami-terkini', 'ApiV1::gempaTsunamiTerkini');
+*/
 
 /**
  * --------------------------------------------------------------------
