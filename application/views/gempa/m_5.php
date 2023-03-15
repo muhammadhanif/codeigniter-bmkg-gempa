@@ -151,10 +151,11 @@
                                                 <tr>
                                                     <th>No</th>
                                                     <th>Tanggal dan Waktu</th>
-                                                    <th>Magnitude</th>
+                                                    <th>Magnitudo</th>
                                                     <th>Kedalaman</th>
                                                     <th>Koordinat</th>
                                                     <th>Wilayah</th>
+                                                    <th>Potensi</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -163,10 +164,11 @@
                                                 <tr>
                                                     <th>No</th>
                                                     <th>Tanggal dan Waktu</th>
-                                                    <th>Magnitude</th>
+                                                    <th>Magnitudo</th>
                                                     <th>Kedalaman</th>
                                                     <th>Koordinat</th>
                                                     <th>Wilayah</th>
+                                                    <th>Potensi</th>
                                                 </tr>
                                             </tfoot>
                                         </table>
@@ -240,8 +242,10 @@
                     var dateTime = item.Tanggal + " " + item.Jam;
                     var magnitude = item.Magnitude
                     var coordinates = item.point.coordinates.split(',');
-                    var latitude = parseFloat(coordinates[1].trim());
-                    var longitude = parseFloat(coordinates[0].trim());
+                    var longitude = parseFloat(coordinates[1].trim());
+                    var latitude = parseFloat(coordinates[0].trim());
+
+                    console.log(latitude);
 
                     L.circle([latitude, longitude], {
                             color: "red"
@@ -275,7 +279,8 @@
                 "columns": [{
                         "data": null,
                         "sClass": "text-center"
-                    }, {
+                    }, 
+                    {
                         "data": "Tanggal",
                         "sClass": "text-center",
                         "render": function(data, type, row) {
@@ -301,6 +306,10 @@
                     },
                     {
                         "data": "Wilayah",
+                        "sClass": "text-center"
+                    },
+                    {
+                        "data": "Potensi",
                         "sClass": "text-center"
                     }
                 ]

@@ -143,7 +143,7 @@
                                                     <td id="tanggal"><small>Loading data</small></td>
                                                 </tr>
                                                 <tr>
-                                                    <th>Magnitude</th>
+                                                    <th>Magnitudo</th>
                                                     <td id="magnitude"><small>Loading data</small></td>
                                                 </tr>
                                                 <tr>
@@ -156,15 +156,7 @@
                                                 </tr>
                                                 <tr>
                                                     <th>Wilayah</th>
-                                                    <td>
-                                                        <ul>
-                                                            <li id="wilayah1"><small>Loading data</small></li>
-                                                            <li id="wilayah2"><small>Loading data</small></li>
-                                                            <li id="wilayah3"><small>Loading data</small></li>
-                                                            <li id="wilayah4"><small>Loading data</small></li>
-                                                            <li id="wilayah5"><small>Loading data</small></li>
-                                                        </ul>
-                                                    </td>
+                                                    <td id="wilayah">><small>Loading data</small></td>
                                                 </tr>
                                                 <tr>
                                                     <th>Potensi</th>
@@ -210,12 +202,8 @@
                         $('#kedalaman').text(response.data.gempa.Kedalaman);
                         $('#koordinat').text(response.data.gempa.Lintang + ' ' + response.data.gempa.Bujur);
                         $('#potensi').text(response.data.gempa.Potensi);
-                        $('#wilayah1').text(response.data.gempa.Wilayah1);
-                        $('#wilayah2').text(response.data.gempa.Wilayah2);
-                        $('#wilayah3').text(response.data.gempa.Wilayah3);
-                        $('#wilayah4').text(response.data.gempa.Wilayah4);
-                        $('#wilayah5').text(response.data.gempa.Wilayah5);
-                        $("#eqmap").attr('src', response.data.eqmap);
+                        $('#wilayah').text(response.data.gempa.Wilayah);
+                        $("#eqmap").attr('src', 'https://data.bmkg.go.id/DataMKG/TEWS/' + response.data.gempa.Shakemap);
                         $('#loading_map').hide();
                     } else {
                         console.log(response.message);
@@ -225,11 +213,7 @@
                         $('#kedalaman').text(response.message);
                         $('#koordinat').text(response.message);
                         $('#potensi').text(response.message);
-                        $('#wilayah1').text(response.message);
-                        $('#wilayah2').text(response.message);
-                        $('#wilayah3').text(response.message);
-                        $('#wilayah4').text(response.message);
-                        $('#wilayah5').text(response.message);
+                        $('#wilayah').text(response.message);
                         $("#eqmap").attr('src', '<?= base_url("assets/image/close-icon.png"); ?>');
                         $('#loading_map').hide();
                     }

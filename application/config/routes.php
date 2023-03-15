@@ -64,4 +64,6 @@ $route['gempa/api-endpoint']['get'] = 'Gempa/apiEndpoint';
 $route['api/v1/gempa/m-5-terkini']['get']       = 'ApiV1/gempaM5Terkini';
 $route['api/v1/gempa/m-5']['get']               = 'ApiV1/gempaM5';
 $route['api/v1/gempa/dirasakan']['get']         = 'ApiV1/gempaDirasakan';
+/*
 $route['api/v1/gempa/tsunami-terkini']['get']   = 'ApiV1/gempaTsunamiTerkini';
+*/
